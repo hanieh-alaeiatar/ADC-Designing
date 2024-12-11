@@ -19,6 +19,37 @@ Key Features of ADS1115
 	8.	Alert/Ready Pin:
 	•	Configurable as an interrupt for threshold monitoring or data readiness.
 
+Inputs:
+Analog Inputs:
+
+4 Single-Ended Inputs:
+
+Pins A0, A1, A2, and A3 for measuring separate voltages relative to GND.
+
+2 Differential Inputs:
+
+Pin pair A0-A1 and A2-A3 for measuring the voltage difference between two signals.
+Input Voltage Range:
+
+Depending on the PGA (Programmable Gate Amplifier) ​​setting, the input voltage is supported from ±256mV to ±6.144V.
+Power Supply:
+VDD: Supply voltage 2.0V to 5.5V.
+GND: Connection to circuit ground.
+I²C Communication:
+SCL: I²C clock line.
+SDA: I²C data line.
+ADDR pin:
+For setting the I²C address of the device (configurable by connecting to GND, VDD, or other voltages).
+
+Outputs:
+Digital data:
+Output data is sent over the I²C interface.
+A 16-bit value (0 to 65535 for single-ended mode) representing the measured voltage.
+In differential mode, values ​​can be negative (16-bit signed number).
+ALERT/RDY pin:
+
+A programmable output to signal events (such as threshold crossing) or data readiness.
+
 Wiring the ADS1115
 
 Single-Ended Mode:
